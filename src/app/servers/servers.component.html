@@ -11,23 +11,11 @@ class="form-control" [(ngModel)]="serverName"
 <button class="btn btn-primary" 
 [disabled]="!allowNewServer" 
 (click)="onCreateServer()">Add Server</button>
-<p>{{serverCreationStatus}}</p>
+<!-- <p>{{serverCreationStatus}}</p> -->
+<p *ngIf> Server was created, server name is {{servername}}</p>
   <app-server></app-server>
   <app-server></app-server>
 <br />
-
-<hr>
-<label>Username</label>
-<input 
-type="text"
-class="form-control"
-[(ngModel)]="username"
-(input)="onExistsUser($event)"
->
-<p>
-  {{username}}
-</p>
-<button class="btn btn-primary" [disabled]="!enableUsernameBtn"  (click)="onUserNameExists($event)" >Reset user</button>
 
 
 

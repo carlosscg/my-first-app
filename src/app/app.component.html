@@ -1,3 +1,16 @@
 <h1> App Component</h1>
 <hr>
 <app-servers></app-servers>
+
+<hr>
+<label>Username</label>
+<input 
+type="text"
+class="form-control"
+[(ngModel)]="username"
+(input)="onExistsUser($event)"
+>
+<p>
+  {{username}}
+</p>
+<button class="btn btn-primary" [disabled]="!enableUsernameBtn"  (click)="onUserNameExists($event)" >Reset user</button>
