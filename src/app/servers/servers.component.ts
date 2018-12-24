@@ -29,5 +29,4 @@ this.allowNewServer = true;
   onUpdateServerName(event: any){
     this.serverName = (<HTMLInputElement>event.target).value;
   }
-
 }
