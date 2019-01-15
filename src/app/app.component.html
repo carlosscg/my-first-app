@@ -1,3 +1,30 @@
 <p>I'm the app component</p>
 <hr>
 <app-servers></app-servers>
+
+
+<!-- <button 
+class="btn btn-primary"
+(click)="logClick()"
+>Display Details</button>
+
+<p *ngIf="showClickNumber"
+[ngStyle]="{backgroundColor:getColor()}"
+[ngClass]="{white: click_number > 4}"
+>click number = {{click_number}}</p>
+
+<p *ngIf="showDetails">Contenido detalles</p> -->
+
+
+<button 
+class="btn btn-primary"
+(click)="onToogleDetails()">Display Details</button>
+
+<p *ngIf="showSecret">Secrete password: tuna</p> 
+
+<div
+    *ngFor="let logItem of log; let i = index "
+    [ngStyle]="{backgroundColor: i>=4 ? 'blue': 'transparent'}"
+    [ngClass]="{'white-text': i >= 4}">{{logItem}}</div>
+
+
